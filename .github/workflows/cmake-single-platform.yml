@@ -30,6 +30,10 @@ jobs:
         path: "~/boost-test"
         key: libboost-test-dev
 
+    - name: Restore boost
+      if: steps.cache-boost-test.outputs.cache-hit == 'true'
+      run: sudo cp --force --recursive ~/boost/* /
+
     - name: Install boost
       if: steps.cache-boost-test.outputs.cache-hit != 'true'
       run: |
