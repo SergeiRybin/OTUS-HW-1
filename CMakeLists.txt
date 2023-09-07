@@ -6,7 +6,7 @@ else()
     set(BUILD_NUMBER 1)
 endif()
 
-project(hw-ver VERSION 0.0.1)
+project(hw-ver VERSION 0.0.1.${BUILD_NUMBER})
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
