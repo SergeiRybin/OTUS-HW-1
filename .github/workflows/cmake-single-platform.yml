@@ -32,7 +32,7 @@ jobs:
 
     - name: Restore boost
       if: steps.cache-boost-test.outputs.cache-hit == 'true'
-      run: sudo cp --force --recursive ~/boost/* /
+      run: sudo cp --force --recursive ~/boost-test/* /
 
     - name: Install boost
       if: steps.cache-boost-test.outputs.cache-hit != 'true'
